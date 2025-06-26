@@ -1,0 +1,12 @@
+# Exported from Render on 2025-06-26T19:47:47Z
+services:
+- type: web
+  name: Maintaipredict
+  runtime: python
+  repo: https://github.com/Moustafagha/Maintaipredict
+  plan: free
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: gunicorn app:app
+  autoDeployTrigger: commit
+version: "1"
